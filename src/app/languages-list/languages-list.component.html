@@ -1,9 +1,21 @@
-<div class='flex flex-wrap gap-4 p-10 justify-center items-center'>
+<div class='flex flex-wrap gap-4 p-10'>
+  <div class='bg-sky-300 border-indigo-400 text-sky-950 hover:no-underline py-4 px-8 rounded-lg transition-colors outline-none'>{{selectedLanguageLabel}}</div>
   <button 
     (click)='changeLanguage(language)' 
-    *ngFor="let language of languages"
-    [ngClass]="{'bg-indigo-600 border-indigo-400 text-white': selectedLanguage === language.value}"
-    class='flex p-2 rounded-lg bg-indigo-50 border-2 border-indigo-100 transition-colors outline-none'>
+    *ngFor="let language of top2Languages"
+    class='flex py-4 px-8 rounded-lg transition-colors outline-none hover:underline'>
       <div>{{language.label}}</div>
   </button>
+  <select 
+    [(ngModel)]="selectedOption"
+    (change)='handleSelectChange()'
+    class='custom-select'
+    >
+    <option 
+      *ngFor="let language of remainingLanguages" 
+      [value]="language.value" 
+      >
+        {{language.label}}
+    </option>
+  </select>
 </div>

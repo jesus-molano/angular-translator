@@ -5,16 +5,16 @@ export interface Language {
 
 export function listOfLanguages(): Language[] {
   return [
-    {label: "Afrikaans", value: "af"},
-    {label: "Arabic", value: "ar"},
-    {label: "French", value: "fr"},
-    {label: "Hindi", value: "hi"},
-    {label: "Japanese", value: "ja"},
-    {label: "Portuguese", value: "pt"},
-    {label: "Russian", value: "ru"},
-    {label: "Simplified Chinese", value: "zh-CN"},
     {label: "Spanish", value: "es"},
-    {label: "Swahili", value: "sw"},
+    {label: "French", value: "fr"},
+    {label: "Japanese", value: "ja"},
+    {label: "Arabic", value: "ar"},
+    {label: "Russian", value: "ru"},
+    {label: "Portuguese", value: "pt"},
+    {label: "Simplified Chinese", value: "zh-CN"},
+    {label: "Hindi", value: "hi"},
     {label: "Thai", value: "th"},
+    {label: "Afrikaans", value: "af"},
+    {label: "Swahili", value: "sw"},
   ]
 }

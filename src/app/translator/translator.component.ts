@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http'
 @Component({
   selector: 'app-translator',
   templateUrl: './translator.component.html',
-  styleUrls: ['./translator.component.css']
 })
 export class TranslatorComponent {
   public selectedLanguage: string = 'es'
@@ -16,8 +15,7 @@ export class TranslatorComponent {
     this.selectedLanguage = language
   }
 
-  traslateText(event: Event): void {
-    event.preventDefault()
+  traslateText(): void {
     if (!this.inputText) return
     this.http
       .post(
