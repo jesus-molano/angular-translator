@@ -11,4 +11,5 @@
 html, body{
   scroll-behavior: smooth;
   height: 100%;
+  font-family:  -apple-system, 'Helvetica Neue', system-ui, sans-serif;
 }

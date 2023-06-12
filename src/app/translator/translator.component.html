@@ -1,0 +1,25 @@
+<app-languages-list 
+  [selectedLanguage]="selectedLanguage"
+  (languageChanged)="changeLanguage($event)">
+</app-languages-list>
+<form class='flex flex-col gap-4' (submit)="traslateText($event)">
+  <div class="translation flex flex-col md:flex-row p-8 gap-2">
+    <div class="form-group flex flex-col flex-1 gap-2">
+      <label for="inputText">Text to translate</label>
+      <textarea
+      name='inputText'
+        class="form-control bg-indigo-50 focus:outline-none border-2 border-transparent focus:border-indigo-200 resize-none rounded p-4"
+        [(ngModel)]="inputText"
+        id="inputText" rows="5"
+        ></textarea>
+    </div>
+    <div class="form-group flex flex-col flex-1 gap-2">
+      <label for="outputText">Translated text</label>
+      <textarea
+        class="form-control bg-indigo-100 focus:outline-none border-2 border-transparent focus:border-indigo-200 resize-none rounded p-4"
+        id="outputText" rows="5" readonly [value]="translatedText" ></textarea>
+    </div>
+  </div>
+  <button
+    class="self-center w-fit p-2 text-white bg-indigo-500 hover:bg-indigo-400 border-2 border-indigo-800 rounded-lg transition-colors">Translate</button>
+</form>

@@ -1,0 +1,9 @@
+<div class='flex flex-wrap gap-4 p-10 justify-center items-center'>
+  <button 
+    (click)='changeLanguage(language)' 
+    *ngFor="let language of languages"
+    [ngClass]="{'bg-indigo-600 border-indigo-400 text-white': selectedLanguage === language.value}"
+    class='flex p-2 rounded-lg bg-indigo-50 border-2 border-indigo-100 transition-colors outline-none'>
+      <div>{{language.label}}</div>
+  </button>
+</div>
