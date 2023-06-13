@@ -1,4 +1,5 @@
 <main class='h-full flex flex-col max-w-7xl mx-auto'>
   <app-header></app-header>
-  <app-translator></app-translator>
+  <app-translator [savedTranslation]='selectedSavedTranslation' (resetSavedTranslation)="resetSelectedSavedTranslation()"></app-translator>
+  <app-saved-translations  (selectSavedTranslation)="selectSavedTranslation($event)" ></app-saved-translations>
 </main>

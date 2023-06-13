@@ -1,0 +1,13 @@
+<div class='flex gap-6 flex-wrap'>
+  <div 
+  class=' flex flex-col w-[300px] gap-4 bg-sky-300 h-[150px] rounded-lg p-2 cursor-pointer hover:scale-[1.05] transition-transform' 
+  *ngFor="let data of savedTranslations"
+  (click)='selectTraslation(data)'
+  >
+    <p class='self-end justify-self-start'>{{data.language}}</p>
+    <div class='flex flex-col flex-1'>
+      <p class='w-full truncate text-xs'>{{data.text}}</p>
+      <p class='w-full truncate'>{{data.translation}}</p>
+    </div>
+  </div>
+</div>

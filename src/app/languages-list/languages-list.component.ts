@@ -41,6 +41,7 @@ export class LanguagesListComponent {
   // Methods
   changeLanguage (language: Language): void {
     this.languageChanged.emit(language.value)
+    this.selectedOption = ''
   }
 
   handleSelectChange(): void {

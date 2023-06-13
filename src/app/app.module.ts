@@ -8,19 +8,23 @@ import { TranslatorComponent } from './translator/translator.component';
 import { HeaderComponent } from './header/header.component';
 import { LanguagesListComponent } from './languages-list/languages-list.component';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SavedTranslationsComponent } from './saved-translations/saved-translations.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TranslatorComponent,
     HeaderComponent,
-    LanguagesListComponent
+    LanguagesListComponent,
+    SavedTranslationsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   bootstrap: [AppComponent]
 })
